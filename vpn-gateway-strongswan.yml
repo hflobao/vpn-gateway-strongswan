@@ -738,6 +738,7 @@ Resources:
                   network ${pVpcCidr}
                   neighbor ${pTunnel1BgpNeighborIpAddress} remote-as ${pTunnel1VgwBgpAsn}
                   neighbor ${pTunnel2BgpNeighborIpAddress} remote-as ${pTunnel2VgwBgpAsn}
+                  neighbor ${pTunnel1BgpNeighborIpAddress} route-map RM_LOWER_PRIORITY out
                   neighbor ${pTunnel2BgpNeighborIpAddress} route-map RM_LOWER_PRIORITY out
                 !
                 route-map RM_LOWER_PRIORITY permit 10
